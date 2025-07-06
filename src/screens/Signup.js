@@ -184,7 +184,7 @@ export default Signup
 const styles = StyleSheet.create({
 
     container:{
-        backgroundColor:'azure',
+        backgroundColor:'#B0E0E6',
         flex:1
 
     },

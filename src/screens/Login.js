@@ -20,10 +20,7 @@ const Login = ({navigation}) => {
         }  
            catch(e){
             console.log(e)
-           }
-
-    
-    
+           } 
     
         
     

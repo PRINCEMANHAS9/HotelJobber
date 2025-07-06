@@ -3,12 +3,12 @@ import React from 'react'
 import Login from './Login';
 import Signup from './Signup';
 import{useState} from 'react'
-import { Picker } from '@react-native-picker/picker';
+// import { Picker } from '@react-native-picker/picker';
 
 
 
 const Homescreen = ({navigation}) => {
-    const [selectedState, setSelectedState] = useState('');
+    // const [selectedState, setSelectedState] = useState('');
     const[modalView1, setModalView1]=useState(false) ;
     const[modalView2, setModalView2]=useState(false) ;
     const[modalView3, setModalView3]=useState(false) ;
@@ -46,10 +46,10 @@ const Homescreen = ({navigation}) => {
 
 
 
-          <View> 
+          <View style={{paddingBottom:30}}> 
             <Text style={styles.text3}> Hot Jobs</Text>
 
-<View style={styles.picker1}>
+{/* <View style={styles.picker1}>
              <Picker
         selectedValue={selectedState}
         onValueChange={(itemValue, itemIndex) => setSelectedState(itemValue)}
@@ -86,7 +86,7 @@ const Homescreen = ({navigation}) => {
         <Picker.Item label="Uttarakhand" value="uttarakhand" color='grey'/>
         <Picker.Item label="West Bengal" value="west_bengal" color='grey'/>
       </Picker>
-      </View>
+      </View> */}
        </View>
 
        
@@ -592,7 +592,7 @@ const styles = StyleSheet.create({
         margin:20
     },
     container:{
-        backgroundColor:'azure',
+        backgroundColor:'#B0E0E6',
         flex:1,
         marginTop:10
     },
@@ -611,6 +611,7 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         marginLeft:15,
         marginRight:15,
+        marginTop:10,
          gap:30,
          borderWidth:0.2,
         borderTopLeftRadius:10,

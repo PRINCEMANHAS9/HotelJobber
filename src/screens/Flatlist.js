@@ -5,118 +5,11 @@ import { useNavigation } from '@react-navigation/native'
 
 
 
-const Users=[
-    {
-        id:1,
-        heading:'VK',
-        title:'Vraj lnn',
-        title1: 'Hotel',
-        Vacancy: 'HouseKeeper',
-        total: 'vacancy: 5',
-        image:require('../assets/pin.png'),
-        location:'Dwarka-Gujrat'
 
-},
-
- {
-        id:2,
-        heading:'IPGH',
-        title:'Iskon Prayagraj Guest House',
-        title1: ' Guest House',
-        Vacancy: 'Sales & marketing',
-        total: 'vacancy: 1',
-        image:require('../assets/pin.png'),
-        location:'Prayagraj-Uttar Pradesh'
-
-},
-
-
- {
-        id:3,
-        heading:'IPGH',    
-
-        title:'Iskon Prayagraj Guest House',
-        title1: ' Guest House',
-        Vacancy: 'Maintenance',
-        total: 'vacancy: 1',
-        image:require('../assets/pin.png'),
-        location:'Prayagraj-Uttar Pradesh'
-
-},
-
-
- {
-        id:4,
-        heading:'RD',
-        title:'The Royal Dudes',
-        title1: 'Restaurant',
-        Vacancy: 'Dishwasher',
-        total: 'vacancy: 2',
-        image:require('../assets/pin.png'),
-        location:'Mumbai-Maharashtra'
-
-},
-
- {
-        id:5,
-        heading:'RD',
-        title:'The Royal Dudes',
-        title1: 'Restaurant',
-        Vacancy: 'Assistant Restaurant Manager',
-        total: 'vacancy: 1',
-        image:require('../assets/pin.png'),
-        location:'Mumbai-Maharashtra'
-
-},
-
-
-{
-        id:6,
-        heading:'RD',
-        title:'The Royal Dudes',
-        title1: 'Restaurant',
-        Vacancy: 'Helper',
-        total: 'vacancy: 2',
-        image:require('../assets/pin.png'),
-        location:'Mumbai-Maharashtra'
-
-},
-
- {
-        id:7,
-        heading:'RD',
-        title:'The Royal Dudes',
-        title1: 'Restaurant',
-        Vacancy: 'Dishwasher',
-        total: 'vacancy: 5',
-        image:require('../assets/pin.png'),
-        location:'Prayagraj-Uttar Pradesh'
-
-},
-
-
- {
-        id:8,
-        heading:'VK',
-        title:'Vraj lnn',
-        title1: 'Hotel',
-        Vacancy: 'Cook',
-        total: 'vacancy: 5',
-        image:require('../assets/pin.png'),
-        location:'Dwarka-Gujrat'
-
-},
-
-
-
-
-
-]
-
-const Flatlist = () => {
+const Flatlist = ({data}) => {
     const navigation = useNavigation(); 
     const renderItem=({item})=>(
-        <TouchableOpacity style={{backgroundColor:'azure'}}
+        <TouchableOpacity style={{backgroundColor:'#B0E0E6'}}
         onPress={()=>navigation.navigate('Formsubmit',{details:item})}>
                     <View style={{justifyContent:'center',
             alignItems:'center',
@@ -151,7 +44,7 @@ const Flatlist = () => {
     )
   return (
     <FlatList
-    data={Users}
+    data={data}
     renderItem={renderItem}
     keyExtractor={(item)=>item.id}
     

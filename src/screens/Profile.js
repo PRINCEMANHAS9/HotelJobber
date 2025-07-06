@@ -86,14 +86,21 @@ const Profile = () => {
 
 
   return (
-    <View style={{marginTop:230,
+    <View style={{
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+     
+      backgroundColor:'#B0E0E6',
+      flex:1
+
 
     }}>
-      <Text style={styles.text1}> name:{saveName}</Text>
-      <Text style={styles.text2} >mobilenumber:{saveNumber}</Text>    
-        <Text style={styles.text3}>emailaddress:{saveEmailAddress}</Text>
+      <View style={styles.container1}>
+        <Text style={styles.text} >Personal details</Text>
+     <Text style={styles.text1}>Name: {saveName}</Text>
+      <Text style={styles.text2} >Mobile Number: {saveNumber}</Text>    
+      <Text style={styles.text3}>Email Address: {saveEmailAddress}</Text>
+      </View>
         
     </View>
   )
@@ -103,18 +110,35 @@ export default Profile
 
 const styles = StyleSheet.create({
   text1:{
-    fontSize:17,
-    fontWeight:'600'
+    fontSize:14,
+    fontWeight:'600',
+    fontStyle:'italic'
 
   },
+
   text2:{
-    fontSize:17,
+    fontStyle:'italic',
+    fontSize:14,
     fontWeight:'600'
 
   },
   text3:{
-    fontSize:17,
+    fontStyle:'italic',
+    fontSize:14,
     fontWeight:'600'
 
+  },
+  text:{
+    fontStyle:'italic',
+
+
+  },
+  container1:{
+    margin:20,
+    marginTop:40,
+    backgroundColor:'#FFF5EE',
+    padding:70,
+    borderRadius:10,
+    borderWidth:0.5
   }
 })

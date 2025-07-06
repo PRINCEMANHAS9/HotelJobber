@@ -4,7 +4,7 @@ import React from 'react'
 const Formsubmit = ({route}) => {
   const  {details} = route.params
   return (
-    <View style={{backgroundColor:'white',
+    <View style={{backgroundColor:'azure',
       justifyContent:'center',
       alignItems:'center',
       marginTop:120,
